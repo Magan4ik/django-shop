@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Категорія {{ category.name }}</title>
+</head>
+<body>
+    <h1>{{ category.name }}</h1>
+    {% for prod in products %}
+        <p><a href="{% url 'shop:detail' prod.slug %}">{{ prod.name }} - {{ prod.price }}</a></p>
+    {% endfor %}
+</body>
+</html>
